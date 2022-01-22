@@ -13,7 +13,7 @@ const items = [
     key: 1,
   },
   {
-    src:"https://i.ibb.co/Tv8dC4x/WEBSITE-PNG-COLLAGEN-2.png",
+    src: "https://i.ibb.co/Tv8dC4x/WEBSITE-PNG-COLLAGEN-2.png",
     key: 2,
   },
   {
@@ -60,27 +60,33 @@ export default function Appheader() {
   });
 
   return (
-    <header className="py-5" style={{backgroundColor: "#2d583a"}}>
+    <section className="py-5 headerX3">
       <div className="container px-5">
         <div className="row gx-5 align-items-center justify-content-center">
           <div className="col-lg-8 col-xl-7 col-xxl-6">
             <div className="my-5 text-center text-xl-start">
-              <h1 className="display-5 text-white mb-2" style={{fontFamily: 'Alleyster'}}>
+              <h1
+                className="display-5 text-success mb-2"
+                style={{ fontFamily: "Alleyster" }}
+              >
                 Invest to your health now!
               </h1>
-              <p className="lead fw-normal text-white-50 mb-4">
+              <p className="lead fw-normal text-black-50 mb-4">
                 Have A Golden Day!
               </p>
               <br />
               <br />
               <div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
                 <a
-                  className="btn btn-warning btn-lg px-4 me-sm-3"
+                  className="btn btn-success btn-lg px-4 me-sm-3 text-light"
                   href="#products"
                 >
                   See Products
                 </a>
-                <a className="btn btn-outline-light btn-lg px-4" href="#reviews">
+                <a
+                  className="btn btn-outline-success btn-lg px-4"
+                  href="#reviews"
+                >
                   See Product Reviews
                 </a>
               </div>
@@ -91,8 +97,9 @@ export default function Appheader() {
               activeIndex={activeIndex}
               next={next}
               previous={previous}
-              dark={false}
+              dark={true}
               slide={true}
+              interval={1000}
             >
               <CarouselIndicators
                 items={items}
@@ -114,6 +121,6 @@ export default function Appheader() {
           </div>
         </div>
       </div>
-    </header>
+    </section>
   );
 }

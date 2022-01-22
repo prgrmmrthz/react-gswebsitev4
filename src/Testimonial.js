@@ -150,7 +150,7 @@ export default function Testimonial() {
   return (
     <div id="reviews">
       <div class="jumbotron">
-        <h1 className="display-4 text-warning">Customer Feedback</h1>
+        <h1 className="display-4 text-success">Customer Feedback</h1>
         <p class="lead">Ratings & Reviews of Golden Seed Products.</p>
         <hr class="my-4" />
         <br />

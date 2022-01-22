@@ -10,7 +10,7 @@ export default function Product(props) {
     <>
       <div class="col mb-5">
         <div class="card h-100">
-          <img class="card-img-top" src={props.product.pic} alt="..." />
+          <img class="card-img-top" src={props.product.pic} alt="..." onClick={toggle} />
           <div class="card-body p-4">
             <div class="text-center">
               <h5 class="fw-bolder">{props.product.name}</h5>
@@ -21,7 +21,9 @@ export default function Product(props) {
                 <div class="bi-star-fill"></div>
                 <div class="bi-star-fill"></div>
               </div>
-              ₱{props.product.price}
+              <span class="text-muted text-decoration-line-through">₱{(Number(props.product.price) + 80).toFixed(2)}</span>
+              <br />
+              ₱{(Number(props.product.price)).toFixed(2)}
             </div>
           </div>
           <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
